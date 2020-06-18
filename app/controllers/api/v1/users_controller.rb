@@ -12,7 +12,7 @@ class Api::V1::UsersController < ApplicationController
     end
 
     def show
-        render json: current_user.to_json(:include => [:apartments]);
+        render json: current_user.to_json(:include => [:properties]);
     end
 
     def new

@@ -10,6 +10,8 @@ Rails.application.routes.draw do
       get '/profile', to: 'users#show'
       delete '/profile', to: 'users#destroy'
       patch '/profile', to: 'users#update'
+      get '/is_fav/:id', to: 'properties#isFav'
+      get '/fav_toggle/:id', to: 'properties#favToggle'
 
 
     end

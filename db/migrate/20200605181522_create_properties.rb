@@ -8,6 +8,12 @@ class CreateProperties < ActiveRecord::Migration[6.0]
       t.integer :price_max
       t.string :address
       t.string :zip
+      t.string :phone
+      t.boolean :dog_friendly
+      t.boolean :cat_friendly
+      t.string :neighborhood
+      t.integer :year_built
+      
     end
   end
 end

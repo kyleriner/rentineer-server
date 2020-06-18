@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_05_181548) do
+ActiveRecord::Schema.define(version: 2020_06_15_162925) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,6 +18,11 @@ ActiveRecord::Schema.define(version: 2020_06_05_181548) do
   create_table "apartments", force: :cascade do |t|
     t.string "unit"
     t.integer "price"
+  end
+
+  create_table "images", force: :cascade do |t|
+    t.integer "property_id"
+    t.string "image"
   end
 
   create_table "properties", force: :cascade do |t|
@@ -28,6 +33,11 @@ ActiveRecord::Schema.define(version: 2020_06_05_181548) do
     t.integer "price_max"
     t.string "address"
     t.string "zip"
+    t.string "phone"
+    t.boolean "dog_friendly"
+    t.boolean "cat_friendly"
+    t.string "neighborhood"
+    t.integer "year_built"
   end
 
   create_table "property_apartments", force: :cascade do |t|
@@ -35,9 +45,9 @@ ActiveRecord::Schema.define(version: 2020_06_05_181548) do
     t.integer "apartment_id"
   end
 
-  create_table "user_apartments", force: :cascade do |t|
+  create_table "user_properties", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "apartment_id"
+    t.integer "property_id"
   end
 
   create_table "users", force: :cascade do |t|
