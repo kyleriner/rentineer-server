@@ -1,24 +1,5 @@
-# README
+Welcome to the Rentineer Austin Server, where all the data on apartments in the Austin area is collected, organized, and utilized by the front-end application. I'm quite proud of my ability to take in admittedly unorganized and oftentimes faulty data and clean it up for usage on my application. I spent most of my time figuring out the archaic nature of the data I was being sent by the Realtor API, and as it turns out they have entries for both the overarching apartment complexes, and individual apartment units. This made organizing the data painful, as the only way to recognize if an entry is a complex or single unit was the inclusion of the "Community" key. 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Technologies
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+For the server, I utilize Ruby on Rails. Once I began to understand the intricacies of Ruby on Rails, I found that it's quite easy to operate. The main hurdle was learning about custom controller actions, and learning the limits of what I can really do under the Ruby on Rails umbrella. Nevertheless, it was an enlightening experience.
